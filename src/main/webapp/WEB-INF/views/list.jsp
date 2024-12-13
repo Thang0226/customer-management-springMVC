@@ -47,7 +47,7 @@
             <td>${customer.email}</td>
             <td>${customer.address}</td>
             <td><button>
-                <a href="customers?action=view&customer_id=${customer.id}">Detail</a>
+                <a href="customer?action=view&customer_id=${customer.id}">Detail</a>
             </button></td>
         </tr>
     </c:forEach>

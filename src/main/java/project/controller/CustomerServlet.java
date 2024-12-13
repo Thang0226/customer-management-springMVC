@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "customerServlet", value = "/customers")
+@WebServlet(name = "customerServlet", value = "/customer")
 public class CustomerServlet extends HttpServlet {
 	CustomerDAO customerDAO = new CustomerDAO();
 
