@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="project"/>
+    <context:component-scan base-package="project.controller"/>
 
     <mvc:annotation-driven/>
 
