@@ -36,19 +36,15 @@
         <th>Name</th>
         <th>Email</th>
         <th>Address</th>
-        <th>Detail Information</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${customers}" var="customer">
         <tr>
             <td>${customer.id}</td>
-            <td>${customer.name}</td>
+            <td><a href="/customers/${customer.id}">${customer.name}</a></td>
             <td>${customer.email}</td>
             <td>${customer.address}</td>
-            <td><button>
-                <a href="customer?action=view&customer_id=${customer.id}">Detail</a>
-            </button></td>
         </tr>
     </c:forEach>
     </tbody>

@@ -75,8 +75,22 @@ public class CustomerDAO implements IDAO<Customer> {
 	}
 
 	@Override
-	public boolean update(Customer object) {
-		return false;
+	public boolean update(Customer customer) {
+		String sql = "UPDATE customer SET name = ?, email = ?, address = ? WHERE id = ?";
+		try (
+				Connection conn = getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+		) {
+			pstmt.setString(1, customer.getName());
+			pstmt.setString(2, customer.getEmail());
+			pstmt.setString(3, customer.getAddress());
+			pstmt.setInt(4, customer.getId());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+		return true;
 	}
 
 	@Override

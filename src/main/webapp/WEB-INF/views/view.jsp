@@ -12,14 +12,14 @@
 </head>
 <body>
 <h2>Customer Information</h2>
-<form method="post" action="customer?action=update">
+<form method="post">
     <fieldset>
         <legend>Customer Information</legend>
         <table>
             <tr>
                 <td>ID:</td>
                 <td>${customer.id}</td>
-                <input type="hidden" name="customer_id" value="${customer.id}">
+<%--                <input type="hidden" name="id" value="${customer.id}">--%>
             </tr>
             <tr>
                 <td><label for="name">Name:</label></td>
